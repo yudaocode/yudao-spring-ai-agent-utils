@@ -17,6 +17,7 @@ permissions:
 
 jobs:
   deploy:
+    if: github.repository == 'spring-ai-community/spring-ai-agent-utils'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

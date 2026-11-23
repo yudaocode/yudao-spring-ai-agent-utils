@@ -1,3 +1,15 @@
+# 芋道 Spring AI Agent Utils
+
+基于 Spring AI Community 的 Agent Utils v0.14.0 维护，保留上游 Java 包名、许可证和提交历史。
+
+| 分支 | 选择方式 |
+| --- | --- |
+| [`main`](https://github.com/yudaocode/yudao-spring-ai-agent-utils/tree/main) | 上游 v0.14.0 源码基线，Java 17+。 |
+| [`main-jdk8`](https://github.com/yudaocode/yudao-spring-ai-agent-utils/tree/main-jdk8) | Spring Boot 2.7 / JDK 8。包含 Workspace、Read / Write / Edit、Shell 和 Docker CLI 执行后端。 |
+
+JDK 8 请从兼容分支的 README 获取 Maven 坐标和构建方式。
+项目同时托管在 [GitHub](https://github.com/yudaocode/yudao-spring-ai-agent-utils) 和 [Gitee](https://gitee.com/yudaocode/yudao-spring-ai-agent-utils)。
+
 # Spring AI Agent Utils
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)

@@ -7,6 +7,7 @@ on:
 
 jobs:
   build:
+    if: github.repository == 'spring-ai-community/spring-ai-agent-utils'
     name: Build branch
     runs-on: ubuntu-latest
     steps:
