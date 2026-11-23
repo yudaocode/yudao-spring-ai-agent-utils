@@ -5,12 +5,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>org.springaicommunity</groupId>
-		<artifactId>spring-ai-agent-utils-parent</artifactId>
-		<version>0.14.0</version>
+		<groupId>cn.iocoder.spring-ai</groupId>
+		<artifactId>yudao-spring-ai-agent-utils-parent</artifactId>
+		<version>0.14.0-20261123</version>
 	</parent>
 
-	<artifactId>spring-ai-agent-utils-exec-backends</artifactId>
+	<artifactId>yudao-spring-ai-agent-utils-exec-backends</artifactId>
 	<packaging>pom</packaging>
 	<name>spring-ai-agent-utils-exec-backends</name>
 	<description>Aggregator for ExecBackend implementations (sandbox execution backends)</description>

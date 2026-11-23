@@ -11,7 +11,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>org.springaicommunity</groupId>
+	<groupId>cn.iocoder.spring-ai</groupId>
 	<artifactId>subagent-a2a-demo</artifactId>
 	<version>0.1.0-SNAPSHOT</version>
 	<name>subagent-a2a-demo</name>
@@ -20,7 +20,7 @@
 	<properties>
 		<java.version>17</java.version>
 		<maven.deploy.skip>true</maven.deploy.skip>
-		<spring-ai.version>2.1.0-SNAPSHOT</spring-ai.version>
+		<spring-ai.version>2.1.0</spring-ai.version>
 		<a2a.sdk.version>0.3.3.Final</a2a.sdk.version>
 	</properties>
 
@@ -40,9 +40,9 @@
 
 
 		<dependency>
-			<groupId>org.springaicommunity</groupId>
-			<artifactId>spring-ai-agent-utils</artifactId>
-			<version>0.14.0</version>
+			<groupId>cn.iocoder.spring-ai</groupId>
+			<artifactId>yudao-spring-ai-agent-utils</artifactId>
+			<version>0.14.0-20261123</version>
 		</dependency>
 
 		<!-- Conversation memory: Spring AI sessions and the session advisors -->
@@ -56,9 +56,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.springaicommunity</groupId>
-			<artifactId>spring-ai-agent-utils-a2a</artifactId>
-			<version>0.14.0</version>
+			<groupId>cn.iocoder.spring-ai</groupId>
+			<artifactId>yudao-spring-ai-agent-utils-a2a</artifactId>
+			<version>0.14.0-20261123</version>
 		</dependency>
 
 		<!-- <dependency>

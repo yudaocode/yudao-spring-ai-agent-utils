@@ -5,23 +5,24 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>org.springaicommunity</groupId>
-		<artifactId>spring-ai-agent-utils-parent</artifactId>
-		<version>0.14.0</version>
+		<groupId>cn.iocoder.spring-ai</groupId>
+		<artifactId>yudao-spring-ai-agent-utils-parent</artifactId>
+		<version>0.14.0-20261123</version>
 		<relativePath>../../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>spring-ai-agent-utils-docker-cli</artifactId>
-	<version>0.14.0</version>
+	<artifactId>yudao-spring-ai-agent-utils-docker-cli</artifactId>
+	<version>0.14.0-20261123</version>
 	<name>spring-ai-agent-utils-docker-cli</name>
 	<description>ExecBackend implementation that runs commands inside a Docker container via the docker CLI</description>
 
-	<url>https://github.com/spring-ai-community/spring-ai-agent-utils</url>
+	<url>https://github.com/yudaocode/yudao-spring-ai-agent-utils</url>
 
 	<scm>
-		<url>https://github.com/spring-ai-community/spring-ai-agent-utils</url>
-		<connection>git://github.com/spring-ai-community/spring-ai-agent-utils.git</connection>
-		<developerConnection>git@github.com:spring-ai-community/spring-ai-agent-utils.git</developerConnection>
+		<url>https://github.com/yudaocode/yudao-spring-ai-agent-utils</url>
+		<connection>scm:git:https://github.com/yudaocode/yudao-spring-ai-agent-utils.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/yudaocode/yudao-spring-ai-agent-utils.git</developerConnection>
+		<tag>v0.14.0-20261123</tag>
 	</scm>
 
 	<organization>
@@ -71,8 +72,8 @@
 	<dependencies>
 
 		<dependency>
-			<groupId>org.springaicommunity</groupId>
-			<artifactId>spring-ai-agent-utils-common</artifactId>
+			<groupId>cn.iocoder.spring-ai</groupId>
+			<artifactId>yudao-spring-ai-agent-utils-common</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 
@@ -93,8 +94,8 @@
 
 		<!-- For the ShellTools-over-DockerCliExecBackend end-to-end test -->
 		<dependency>
-			<groupId>org.springaicommunity</groupId>
-			<artifactId>spring-ai-agent-utils</artifactId>
+			<groupId>cn.iocoder.spring-ai</groupId>
+			<artifactId>yudao-spring-ai-agent-utils</artifactId>
 			<version>${project.version}</version>
 			<scope>test</scope>
 		</dependency>

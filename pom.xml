@@ -4,20 +4,21 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.springaicommunity</groupId>
-    <artifactId>spring-ai-agent-utils-parent</artifactId>
-    <version>0.14.0</version>
+    <groupId>cn.iocoder.spring-ai</groupId>
+    <artifactId>yudao-spring-ai-agent-utils-parent</artifactId>
+    <version>0.14.0-20261123</version>
 
     <name>Spring AI Agent Utilities Parent</name>
 
     <description>Parent project for the Spring AI Agent Utilities modules</description>
 
-    <url>https://github.com/spring-ai-community/spring-ai-agent-utils</url>
+    <url>https://github.com/yudaocode/yudao-spring-ai-agent-utils</url>
 
     <scm>
-        <url>https://github.com/spring-ai-community/spring-ai-agent-utils</url>
-        <connection>git://github.com/spring-ai-community/spring-ai-agent-utils.git</connection>
-        <developerConnection>git@github.com:spring-ai-community/spring-ai-agent-utils.git</developerConnection>
+        <url>https://github.com/yudaocode/yudao-spring-ai-agent-utils</url>
+        <connection>scm:git:https://github.com/yudaocode/yudao-spring-ai-agent-utils.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/yudaocode/yudao-spring-ai-agent-utils.git</developerConnection>
+        <tag>v0.14.0-20261123</tag>
     </scm>
 
     <organization>

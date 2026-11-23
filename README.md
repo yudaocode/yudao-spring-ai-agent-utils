@@ -10,6 +10,15 @@
 JDK 8 请从兼容分支的 README 获取 Maven 坐标和构建方式。
 项目同时托管在 [GitHub](https://github.com/yudaocode/yudao-spring-ai-agent-utils) 和 [Gitee](https://gitee.com/yudaocode/yudao-spring-ai-agent-utils)。
 
+## Maven 使用方式
+
+Java 17+ 导入 `cn.iocoder.spring-ai:yudao-spring-ai-agent-utils-bom:0.14.0-20261123`。
+通过 BOM 管理 `yudao-spring-ai-agent-utils`、`yudao-spring-ai-agent-utils-common`、`yudao-spring-ai-agent-utils-docker-cli` 和 `yudao-spring-ai-agent-utils-a2a`。
+模型宿主提供 Spring AI 2.1.0 的 client-chat，Dream 另需同线的 session 制品。
+Java 包名沿用 `org.springaicommunity.agent.*`，应用只引入一套 Agent Utils 制品。
+Boot 2 / JDK 8 使用 [main-jdk8](https://github.com/yudaocode/yudao-spring-ai-agent-utils/tree/main-jdk8) 分支的 Maven 版本。
+发版内容见[芋道变更日志](CHANGELOG-YUDAO.md)。
+
 # Spring AI Agent Utils
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
