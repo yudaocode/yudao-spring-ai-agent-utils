@@ -9,7 +9,7 @@
     </parent>
     <groupId>cn.iocoder.spring-ai.compatibility</groupId>
     <artifactId>boot2-agent-utils</artifactId>
-    <version>2.1.1-jdk8-SNAPSHOT</version>
+    <version>0.14.0-jdk8-20261123</version>
     <properties>
         <java.version>8</java.version>
         <maven.compiler.release>8</maven.compiler.release>
@@ -25,8 +25,8 @@
         <dependencies>
             <dependency>
                 <groupId>cn.iocoder.spring-ai</groupId>
-                <artifactId>spring-ai-agent-utils-bom</artifactId>
-                <version>2.1.1-jdk8-SNAPSHOT</version>
+                <artifactId>yudao-spring-ai-agent-utils-bom</artifactId>
+                <version>0.14.0-jdk8-20261123</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -39,11 +39,11 @@
         </dependency>
         <dependency>
             <groupId>cn.iocoder.spring-ai</groupId>
-            <artifactId>spring-ai-agent-utils-compat</artifactId>
+            <artifactId>yudao-spring-ai-agent-utils</artifactId>
         </dependency>
         <dependency>
             <groupId>cn.iocoder.spring-ai</groupId>
-            <artifactId>spring-ai-agent-utils-docker-cli-compat</artifactId>
+            <artifactId>yudao-spring-ai-agent-utils-docker-cli</artifactId>
         </dependency>
         <dependency>
             <groupId>cn.iocoder.spring-ai</groupId>

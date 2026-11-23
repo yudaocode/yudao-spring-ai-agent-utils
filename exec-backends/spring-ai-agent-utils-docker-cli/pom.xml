@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>cn.iocoder.spring-ai</groupId>
-        <artifactId>spring-ai-agent-utils-parent</artifactId>
-        <version>2.1.1-jdk8-SNAPSHOT</version>
+        <artifactId>yudao-spring-ai-agent-utils-parent</artifactId>
+        <version>0.14.0-jdk8-20261123</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
-    <artifactId>spring-ai-agent-utils-docker-cli-compat</artifactId>
+    <artifactId>yudao-spring-ai-agent-utils-docker-cli</artifactId>
     <name>Agent Utils Docker CLI 0.14.0 Java 8 compatibility</name>
     <url>https://github.com/spring-ai-community/spring-ai-agent-utils</url>
     <dependencies>
@@ -17,12 +17,12 @@
         </dependency>
         <dependency>
             <groupId>cn.iocoder.spring-ai</groupId>
-            <artifactId>spring-ai-agent-utils-common-compat</artifactId>
+            <artifactId>yudao-spring-ai-agent-utils-common</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>cn.iocoder.spring-ai</groupId>
-            <artifactId>spring-ai-agent-utils-compat</artifactId>
+            <artifactId>yudao-spring-ai-agent-utils</artifactId>
             <version>${project.version}</version>
             <scope>test</scope>
         </dependency>

@@ -2,10 +2,24 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0">
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.iocoder.spring-ai</groupId>
-    <artifactId>spring-ai-agent-utils-parent</artifactId>
-    <version>2.1.1-jdk8-SNAPSHOT</version>
+    <artifactId>yudao-spring-ai-agent-utils-parent</artifactId>
+    <version>0.14.0-jdk8-20261123</version>
     <packaging>pom</packaging>
     <name>Yudao Spring AI Agent Utils for Java 8</name>
+    <description>Workspace, file and shell tools for Spring Boot 2 and Java 8</description>
+    <scm>
+        <url>https://github.com/yudaocode/yudao-spring-ai-agent-utils</url>
+        <connection>scm:git:https://github.com/yudaocode/yudao-spring-ai-agent-utils.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/yudaocode/yudao-spring-ai-agent-utils.git</developerConnection>
+        <tag>v0.14.0-jdk8-20261123</tag>
+    </scm>
+    <developers>
+        <developer>
+            <id>yudaocode</id>
+            <name>芋道源码</name>
+            <url>https://github.com/yudaocode</url>
+        </developer>
+    </developers>
     <url>https://github.com/yudaocode/yudao-spring-ai-agent-utils</url>
     <licenses>
         <license>

@@ -14,15 +14,15 @@ JDK 8 请从兼容分支的 README 获取 Maven 坐标和构建方式。
 
 `main-jdk8` 将 Agent Utils v0.14.0 的 common、tools 和 Docker CLI 移植到芋道 Spring AI JDK 8 兼容线。
 默认使用 Maven Central 上的芋道 Spring AI `2.1.0-jdk8-preview-20261119`。
-Agent Utils 自身从本分支安装，版本为 `2.1.1-jdk8-SNAPSHOT`。
+Agent Utils 的 Maven 版本为 `0.14.0-jdk8-20261123`。
 
 ```xml
 <dependencyManagement>
     <dependencies>
         <dependency>
             <groupId>cn.iocoder.spring-ai</groupId>
-            <artifactId>spring-ai-agent-utils-bom</artifactId>
-            <version>2.1.1-jdk8-SNAPSHOT</version>
+            <artifactId>yudao-spring-ai-agent-utils-bom</artifactId>
+            <version>0.14.0-jdk8-20261123</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>
@@ -32,16 +32,16 @@ Agent Utils 自身从本分支安装，版本为 `2.1.1-jdk8-SNAPSHOT`。
 <dependencies>
     <dependency>
         <groupId>cn.iocoder.spring-ai</groupId>
-        <artifactId>spring-ai-agent-utils-compat</artifactId>
+        <artifactId>yudao-spring-ai-agent-utils</artifactId>
     </dependency>
     <dependency>
         <groupId>cn.iocoder.spring-ai</groupId>
-        <artifactId>spring-ai-agent-utils-docker-cli-compat</artifactId>
+        <artifactId>yudao-spring-ai-agent-utils-docker-cli</artifactId>
     </dependency>
 </dependencies>
 ```
 
-`spring-ai-agent-utils-common-compat` 会随工具和 Docker 后端传递引入。
+`yudao-spring-ai-agent-utils-common` 会随工具和 Docker 后端传递引入。
 应用通过模型 starter 或显式依赖提供 `spring-ai-client-chat`，使用会话回忆时再引入 `spring-ai-session`。
 同一个应用使用一套 Agent Utils 制品，避免 Java 类重复。
 
@@ -73,6 +73,7 @@ Docker 工作区中的相对路径可由 `Read`、`Write`、`Edit` 和 `Bash` �
 ```
 
 独立 Boot 2 消费端验证文件工具与 Shell 的回调注册、容器挂载、回收，以及既有的 Dream 历史回忆。
+记录见[芋道变更日志](CHANGELOG-YUDAO.md)。
 上游 README 保留在下方。
 
 # Spring AI Agent Utils
@@ -176,7 +177,7 @@ Use the BOM to manage versions consistently across all modules:
     <dependencies>
         <dependency>
             <groupId>org.springaicommunity</groupId>
-            <artifactId>spring-ai-agent-utils-bom</artifactId>
+            <artifactId>yudao-spring-ai-agent-utils-bom</artifactId>
             <version>0.14.0</version>
             <type>pom</type>
             <scope>import</scope>
