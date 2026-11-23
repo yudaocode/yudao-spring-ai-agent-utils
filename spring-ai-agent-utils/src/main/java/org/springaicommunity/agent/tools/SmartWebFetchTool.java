@@ -337,10 +337,6 @@ public class SmartWebFetchTool implements AutoCloseable {
 					return byteResponse.request();
 				}
 
-				@Override
-				public Optional<HttpResponse<String>> previousResponse() {
-					return Optional.empty();
-				}
 
 				@Override
 				public java.net.http.HttpHeaders headers() {
@@ -352,10 +348,6 @@ public class SmartWebFetchTool implements AutoCloseable {
 					return body;
 				}
 
-				@Override
-				public Optional<javax.net.ssl.SSLSession> sslSession() {
-					return byteResponse.sslSession();
-				}
 
 				@Override
 				public URI uri() {
@@ -464,9 +456,8 @@ public class SmartWebFetchTool implements AutoCloseable {
 	 */
 	@Override
 	public void close() {
-		// HttpClient doesn't implement AutoCloseable, but we can shut down its executor
-		// For now, we'll clear the cache and let the HttpClient be garbage collected
 		this.urlCache.clear();
+		this.httpClient.close();
 		logger.debug("SmartWebFetchTool closed and resources cleaned up");
 	}
 

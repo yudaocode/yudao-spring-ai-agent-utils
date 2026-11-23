@@ -10,6 +10,71 @@
 JDK 8 请从兼容分支的 README 获取 Maven 坐标和构建方式。
 项目同时托管在 [GitHub](https://github.com/yudaocode/yudao-spring-ai-agent-utils) 和 [Gitee](https://gitee.com/yudaocode/yudao-spring-ai-agent-utils)。
 
+## Spring Boot 2.7 / JDK 8 使用方式
+
+`main-jdk8` 将 Agent Utils v0.14.0 的 common、tools 和 Docker CLI 移植到芋道 Spring AI JDK 8 兼容线。
+默认使用 Maven Central 上的芋道 Spring AI `2.1.0-jdk8-preview-20261119`。
+Agent Utils 自身从本分支安装，版本为 `2.1.1-jdk8-SNAPSHOT`。
+
+```xml
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>cn.iocoder.spring-ai</groupId>
+            <artifactId>spring-ai-agent-utils-bom</artifactId>
+            <version>2.1.1-jdk8-SNAPSHOT</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+
+<dependencies>
+    <dependency>
+        <groupId>cn.iocoder.spring-ai</groupId>
+        <artifactId>spring-ai-agent-utils-compat</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>cn.iocoder.spring-ai</groupId>
+        <artifactId>spring-ai-agent-utils-docker-cli-compat</artifactId>
+    </dependency>
+</dependencies>
+```
+
+`spring-ai-agent-utils-common-compat` 会随工具和 Docker 后端传递引入。
+应用通过模型 starter 或显式依赖提供 `spring-ai-client-chat`，使用会话回忆时再引入 `spring-ai-session`。
+同一个应用使用一套 Agent Utils 制品，避免 Java 类重复。
+
+```java
+try (DockerCliExecBackend backend = DockerCliExecBackend.builder()
+        .image("alpine:3.20")
+        .mount(workspacePath, "/workspace")
+        .build()) {
+    ToolCallback[] tools = ToolCallbacks.from(
+            FileSystemTools.builder().workspace(backend.workspace()).build(),
+            ShellTools.builder().execBackend(backend).build());
+    // 在后端关闭前完成注册和调用。
+}
+```
+
+Docker 工作区中的相对路径可由 `Read`、`Write`、`Edit` 和 `Bash` 共用。
+应用通过 `close()` 回收受管容器。
+
+### 构建和复验
+
+用 JDK 17 运行 Maven，编译目标为 Java 8。
+兼容测试由 Corretto 8 等原生 JDK 8 JVM 执行，测试源码位于各模块的 `src/test/java8`。
+启用 Docker 验收前准备 `alpine:3.20` 和 `hello-world:latest` 镜像。
+
+```sh
+./mvnw clean install -Dcompat.test.jvm=/path/to/jdk8/bin/java -Dcompat.agent-utils.docker.tests=true
+./mvnw -f compatibility-tests/boot2-agent-utils/pom.xml clean test \
+  -Dcompat.test.jvm=/path/to/jdk8/bin/java -Dcompat.agent-utils.docker.tests=true
+```
+
+独立 Boot 2 消费端验证文件工具与 Shell 的回调注册、容器挂载、回收，以及既有的 Dream 历史回忆。
+上游 README 保留在下方。
+
 # Spring AI Agent Utils
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)

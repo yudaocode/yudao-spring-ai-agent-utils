@@ -1,111 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-
-	<parent>
-		<groupId>org.springaicommunity</groupId>
-		<artifactId>spring-ai-agent-utils-parent</artifactId>
-		<version>0.14.0</version>
-		<relativePath>../../pom.xml</relativePath>
-	</parent>
-
-	<artifactId>spring-ai-agent-utils-docker-cli</artifactId>
-	<version>0.14.0</version>
-	<name>spring-ai-agent-utils-docker-cli</name>
-	<description>ExecBackend implementation that runs commands inside a Docker container via the docker CLI</description>
-
-	<url>https://github.com/spring-ai-community/spring-ai-agent-utils</url>
-
-	<scm>
-		<url>https://github.com/spring-ai-community/spring-ai-agent-utils</url>
-		<connection>git://github.com/spring-ai-community/spring-ai-agent-utils.git</connection>
-		<developerConnection>git@github.com:spring-ai-community/spring-ai-agent-utils.git</developerConnection>
-	</scm>
-
-	<organization>
-		<name>Spring AI Community</name>
-		<url>https://github.com/spring-ai-community</url>
-	</organization>
-
-	<licenses>
-		<license>
-			<name>Apache License 2.0</name>
-			<url>https://www.apache.org/licenses/LICENSE-2.0</url>
-		</license>
-	</licenses>
-
-	<developers>
-		<developer>
-			<name>Christian Tzolov</name>
-		</developer>
-	</developers>
-
-	<issueManagement>
-		<system>Github Issues</system>
-		<url>https://github.com/spring-ai-community/spring-ai-agent-utils/issues</url>
-	</issueManagement>
-	<ciManagement>
-		<system>Github Actions</system>
-		<url>https://github.com/spring-ai-community/spring-ai-agent-utils/actions</url>
-	</ciManagement>
-
-	<properties>
-		<maven.compiler.target>17</maven.compiler.target>
-		<maven.compiler.source>17</maven.compiler.source>
-	</properties>
-
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.ai</groupId>
-				<artifactId>spring-ai-bom</artifactId>
-				<version>${spring-ai.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
-	<dependencies>
-
-		<dependency>
-			<groupId>org.springaicommunity</groupId>
-			<artifactId>spring-ai-agent-utils-common</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-
-		<!-- Test dependencies -->
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter</artifactId>
-			<version>5.10.2</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.assertj</groupId>
-			<artifactId>assertj-core</artifactId>
-			<version>3.25.3</version>
-			<scope>test</scope>
-		</dependency>
-
-		<!-- For the ShellTools-over-DockerCliExecBackend end-to-end test -->
-		<dependency>
-			<groupId>org.springaicommunity</groupId>
-			<artifactId>spring-ai-agent-utils</artifactId>
-			<version>${project.version}</version>
-			<scope>test</scope>
-		</dependency>
-
-		<!-- spring-ai-agent-utils declares its Spring deps as provided; the ShellTools
-			end-to-end test supplies them, like an application would -->
-		<dependency>
-			<groupId>org.springframework.ai</groupId>
-			<artifactId>spring-ai-client-chat</artifactId>
-			<scope>test</scope>
-		</dependency>
-
-	</dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>cn.iocoder.spring-ai</groupId>
+        <artifactId>spring-ai-agent-utils-parent</artifactId>
+        <version>2.1.1-jdk8-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+    <artifactId>spring-ai-agent-utils-docker-cli-compat</artifactId>
+    <name>Agent Utils Docker CLI 0.14.0 Java 8 compatibility</name>
+    <url>https://github.com/spring-ai-community/spring-ai-agent-utils</url>
+    <dependencies>
+        <dependency>
+            <groupId>cn.iocoder.spring-ai</groupId>
+            <artifactId>spring-ai-commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.iocoder.spring-ai</groupId>
+            <artifactId>spring-ai-agent-utils-common-compat</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.iocoder.spring-ai</groupId>
+            <artifactId>spring-ai-agent-utils-compat</artifactId>
+            <version>${project.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>cn.iocoder.spring-ai</groupId>
+            <artifactId>spring-ai-client-chat</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 </project>

@@ -169,7 +169,7 @@ final class AllowedDirectories {
 			}
 		}
 
-		java.util.List<Path> toList() {
+		java.util.List<Path> directories() {
 			return java.util.List.copyOf(this.directories);
 		}
 

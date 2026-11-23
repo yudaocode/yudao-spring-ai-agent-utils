@@ -184,7 +184,9 @@ public final class CrossSessionRecallTools {
 
 		List<List<SessionEvent>> perSession = new ArrayList<>();
 		for (Session session : sessions) {
-			perSession.add(searchSession(session.id(), firstBatch, (int) needed));
+			if (this.principalName.equals(SessionAttributes.principalName(session))) {
+				perSession.add(searchSession(session.id(), firstBatch, (int) needed));
+			}
 		}
 
 		List<SessionEvent> merged = merge(perSession, (int) needed);

@@ -661,7 +661,7 @@ public class GrepTool {
 
 		public GrepTool build() {
 			return new GrepTool(this.maxOutputLength, this.maxDepth, this.maxLineLength, this.workingDirectory,
-					this.allowedDirectories.toList());
+					this.allowedDirectories.directories());
 		}
 
 	}

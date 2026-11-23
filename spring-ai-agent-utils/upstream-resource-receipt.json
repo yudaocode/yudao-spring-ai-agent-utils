@@ -1,0 +1,43 @@
+{
+  "artifact": "org.springaicommunity:spring-ai-agent-utils:0.14.0",
+  "origin": "https://repo.maven.apache.org/maven2/org/springaicommunity/spring-ai-agent-utils/0.14.0/spring-ai-agent-utils-0.14.0.jar",
+  "jarSha256": "8d38883deb175088a54df90eeda1b470f4682125952f0b880162830ac8d40a55",
+  "resources": [
+    {
+      "path": "prompt/AUTO_DREAM_SYSTEM_PROMPT.md",
+      "sha256": "0e81827a89f3dd42c57a227589d9ab80e2c8daef42249da7d9aebec2ca7df9a4"
+    },
+    {
+      "path": "prompt/MAIN_AGENT_SYSTEM_PROMPT_ORIGINAL.md",
+      "sha256": "36d06eefc84b6ef09c83d367d9a6addf8771e8b3ed88d64c66ebf4e510dce327"
+    },
+    {
+      "path": "prompt/AUTO_MEMORY_TOOLS_SYSTEM_PROMPT.md",
+      "sha256": "92d2aaa5c3a78ffa71a43bfc5fd81fe8e0e6d41afe416074cacb59ce00d24c34"
+    },
+    {
+      "path": "prompt/MAIN_AGENT_SYSTEM_PROMPT_V2.md",
+      "sha256": "bb334d4fa9e4bab09266ab5c578f272fa05f1d1bc50aa4bafdc789112c6e1833"
+    },
+    {
+      "path": "prompt/AUTO_MEMORY_FILESYSTEM_TOOLS_SYSTEM_PROMPT.md",
+      "sha256": "eac3018c25a89b6c9448211801ab69ffec3afbd7d188e9cfa33c4bc1d1a0b976"
+    },
+    {
+      "path": "agent/EXPLORE_SUBAGENT.md",
+      "sha256": "e5fea6fb1c6e0b78976094fecb5fd0ce6fbbc13509152881f2ed23e5a06a84bd"
+    },
+    {
+      "path": "agent/PLAN_SUBAGENT.md",
+      "sha256": "c99bae09ba93a8aac905b13c2ba1641948faacffbbde0bcd2ff8f7b6121b28a2"
+    },
+    {
+      "path": "agent/BASH_SUBAGENT.md",
+      "sha256": "06287aa046284f0309c9ab199a6ee6ca1acf0fa371cfc82ca6185e7ce315789f"
+    },
+    {
+      "path": "agent/GENERAL_PURPOSE_SUBAGENT.md",
+      "sha256": "3c46d17c78a67860a700d66fe4b9d3707760deb6c2cf93b05d2c53dd870488e8"
+    }
+  ]
+}

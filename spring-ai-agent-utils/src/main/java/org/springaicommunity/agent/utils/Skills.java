@@ -199,9 +199,8 @@ public class Skills {
 			throws IOException {
 		// Primary: Spring's ResourcePatternResolver — works for well-formed JARs with
 		// explicit directory entries and for resources on the filesystem.
-		PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver(classLoader);
-		// Do not retain cached JAR handles after loading skills (they lock files on Windows).
-		resolver.setUseCaches(false);
+		// Spring 5 already disables caching for ordinary JAR discovery and URL resources.
+		ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver(classLoader);
 		Resource[] resources = resolver.getResources("classpath*:" + classpathPrefix + "/**/SKILL.md");
 
 		if (resources.length > 0) {
@@ -214,7 +213,7 @@ public class Skills {
 					// system of a GraalVM native image, where getFile() is unsupported.
 					String basePath;
 					if (skillResource instanceof FileSystemResource fileSystemResource) {
-						basePath = fileSystemResource.getFilePath().toAbsolutePath().getParent().toString();
+						basePath = java.nio.file.Paths.get(fileSystemResource.getURI()).toAbsolutePath().getParent().toString();
 					}
 					else if (skillResource.isFile()) {
 						basePath = skillResource.getFile().toPath().toAbsolutePath().getParent().toString();

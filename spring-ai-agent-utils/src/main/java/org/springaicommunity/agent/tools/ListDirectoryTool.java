@@ -213,7 +213,7 @@ public class ListDirectoryTool {
 		}
 
 		public ListDirectoryTool build() {
-			return new ListDirectoryTool(workingDirectory, this.allowedDirectories.toList());
+			return new ListDirectoryTool(workingDirectory, this.allowedDirectories.directories());
 		}
 
 	}

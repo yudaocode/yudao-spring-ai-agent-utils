@@ -321,7 +321,7 @@ public class GlobTool {
 		}
 
 		public GlobTool build() {
-			return new GlobTool(maxDepth, maxResults, workingDirectory, this.allowedDirectories.toList());
+			return new GlobTool(maxDepth, maxResults, workingDirectory, this.allowedDirectories.directories());
 		}
 
 	}

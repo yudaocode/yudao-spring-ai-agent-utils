@@ -589,7 +589,7 @@ public class FileSystemTools {
 		}
 
 		public FileSystemTools build() {
-			return new FileSystemTools(this.workingDirectory, this.allowedDirectories.toList());
+			return new FileSystemTools(this.workingDirectory, this.allowedDirectories.directories());
 		}
 
 	}
